@@ -79,11 +79,8 @@ try:
 
 
 except:  # pragma: no cover
-    print('here')
-    a = 'https://raw.githubusercontent.com/linwoodc3/gdeltPyR/master' \
-        '/utils/' \
-        'schema_csvs/cameoCodes.json'
-    codes = json.loads((requests.get(a).content.decode('utf-8')))
+    with open(os.path.join(UTIL_FILES_PATH, 'cameoCodes.json'), 'r') as f:
+        codes = json.load(f)
 
 ##############################
 # Core GDELT class
