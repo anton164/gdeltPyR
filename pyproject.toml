@@ -7,8 +7,9 @@ build-backend = "setuptools.build_meta"
 
 
 [project]
+name = "gdelt"
+version = "1.0.2"
 dependencies = ['numpy>=1.11.1', 'pandas>=0.23', 'requests>=2.31.0', 'python-dateutil>=2.8.2']
-dynamic = ["maintainers","version","optional-dependencies"]
 description = "Python-based framework to access and analyze Global Database of Events, Language, and Tone (GDELT) 1.0 or 2.0 data in a Python Pandas or R dataframe"
 readme = "README.md"
 license = { file="LICENSE" }
@@ -31,6 +32,8 @@ classifiers=[
     ]
 
 
+[tool.setuptools.packages]
+find = {include = ["gdelt", "utils", "data"]}
 
 [tool.gdelt.packages.find]
 where = ["data"]

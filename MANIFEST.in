@@ -9,6 +9,7 @@ include *CHANGES
 exclude *.yml
 recursive-include docs *
 recursive-include data *.json
+recursive-include data *.csv
 recursive-include utils/schema_csvs *
 
 
